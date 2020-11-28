@@ -5,9 +5,11 @@ import AppButton from './app/components/AppButton';
 
 import AppText from './app/components/AppText';
 import Card from './app/components/Card';
-import ListingDetailsScreen from './app/screen/ListingDetailsScreen';
+import MessageScreen from './app/screen/MessageScreen';
 import ViewImageScreen from './app/screen/ViewImageScreen';
-import WelcomeScreen from './app/screen/WelcomeScreen';
+
+
+
 
 const PressHandler = () => {
   console.log("Good Morning");
@@ -15,7 +17,7 @@ const PressHandler = () => {
 
 export default function App() {
   return (
-    <ListingDetailsScreen />
+    <MessageScreen></MessageScreen>
   );
 }
 
