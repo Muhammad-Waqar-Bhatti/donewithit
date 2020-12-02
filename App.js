@@ -7,8 +7,8 @@ import AppText from './app/components/AppText';
 import Card from './app/components/Card';
 import MessageScreen from './app/screen/MessageScreen';
 import ViewImageScreen from './app/screen/ViewImageScreen';
-
-
+import Screen from './app/components/screen';
+import Icon from './app/components/Icon';
 
 
 const PressHandler = () => {
@@ -17,7 +17,9 @@ const PressHandler = () => {
 
 export default function App() {
   return (
-    <MessageScreen></MessageScreen>
+    <Screen>
+      <Icon name="email" size={50} backgroundColor="red" iconColor="white"></Icon>
+    </Screen>
   );
 }
 
