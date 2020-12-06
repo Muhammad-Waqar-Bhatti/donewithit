@@ -9,6 +9,9 @@ import MessageScreen from './app/screen/MessageScreen';
 import ViewImageScreen from './app/screen/ViewImageScreen';
 import Screen from './app/components/screen';
 import Icon from './app/components/Icon';
+import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screen/AccountScreen';
+import ListingsScreen from './app/screen/ListingsScreen';
 
 
 const PressHandler = () => {
@@ -17,9 +20,7 @@ const PressHandler = () => {
 
 export default function App() {
   return (
-    <Screen>
-      <Icon name="email" size={50} backgroundColor="red" iconColor="white"></Icon>
-    </Screen>
+    <ListingsScreen />
   );
 }
 
