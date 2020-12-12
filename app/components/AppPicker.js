@@ -9,7 +9,7 @@ import PickerItem from './PickerItem';
 
 
 
-function AppPicker({icon, items,onSelectItem, selectedItem placeholder,}) {
+function AppPicker({icon, items,onSelectItem, selectedItem, placeholder,}) {
     const [modalVisible,setModalVisible] = useState(false);
     return (
         <>
