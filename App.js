@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, Alert,Button} from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, Alert,Button, TextInput} from 'react-native';
 import AppButton from './app/components/AppButton';
 
 import AppText from './app/components/AppText';
@@ -12,15 +12,36 @@ import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screen/AccountScreen';
 import ListingsScreen from './app/screen/ListingsScreen';
+import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
 
 
-const PressHandler = () => {
-  console.log("Good Morning");
-}
+const categories = [
+  {
+      label: "furniture",
+      value : 1
+  },
+  {
+      label: "Clothing",
+      value : 2
+  },
+  {
+      label: "Electronics",
+      value : 3
+  },
+  {
+      label: "Accessories",
+      value : 4
+  },
+];
 
 export default function App() {
+  const [category, setCategory] = useState();
   return (
-    <ListingsScreen />
+    <Screen>
+      <AppPicker selectedItem={category} onSelectItem={(item) => setCategory(item)} items={categories} icon="apps"placeholder="Categories"></AppPicker>
+      <AppTextInput placeholder="Username" icon="email" />
+    </Screen>
   );
 }
 
@@ -31,4 +52,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: "center",
   },
+  
 });
