@@ -15,13 +15,14 @@ import ListingsScreen from './app/screen/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import LoginScreen from './app/screen/LoginScreen';
+import ListingEditScreen from './app/screen/ListingEditScreen';
 
 
 
 export default function App() {
   
   return (
-    <LoginScreen />
+    <ListingEditScreen/>
   );
 }
 
