@@ -10,7 +10,7 @@ const initialMessages = [
     {
         id: 1,
         title: 'Mosh Hamadani',
-        description: 'Hey whatsup dude',
+        description: 'Hey whatsup dude ',
         image: require('../assets/mosh.jpg')
     },
     {

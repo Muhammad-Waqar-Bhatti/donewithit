@@ -4,11 +4,11 @@ import { MaterialCommunityIcons} from  '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
 import defaultStyles from '../config/style';
 
-function AppTextInput({icon, ...otherProps}) {
+function AppTextInput({icon,width = '100%', ...otherProps}) {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {width}]}>
            {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon}/>} 
-            <TextInput placeholderTextColor={defaultStyles.colors.medium} style={defaultStyles.text} {...otherProps} ></TextInput>
+            <TextInput placeholderTextColor={defaultStyles.colors.medium} style={[defaultStyles.text]}  {...otherProps} ></TextInput>
         </View>
     );
 }
@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         flexDirection: 'row',
         alignItems: "center",
-        width: '100%',
         padding:15,
         marginVertical: 10,
     },
